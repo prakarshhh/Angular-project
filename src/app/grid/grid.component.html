@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.component.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4 bg-light">
+                <input type="text" [(ngModel)]="numbers" name="" id="num" class="form-control my-3 py-3" disabled>
+                <div class="row gx-0">
+                    <div class="col-8 bg-dark">
+
+                        <button class="btn btn-dark btn-lg text-danger mx-5" (click)="zero()" id="btn">AC</button>
+
+
+                    </div>
+                    <div class="col-4 bg-dark">
+                        <button class="btn btn-dark text-white mx-4 "(click)="operator($event)" value="/">/</button>
+                    </div>
+                </div>
+                <div class="row gx-0">
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="7" (click)="digit($event)">7</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="8" (click)="digit($event)">8</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="9" (click)="digit($event)">9</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="*" (click)="operator($event)">*</button>
+                    </div>
+                </div>
+                <div class="row gx-0">
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="4" (click)="digit($event)">4</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="5" (click)="digit($event)">5</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="6" (click)="digit($event)">6</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="-" (click)="operator($event)">-</button>
+                    </div>
+                </div>
+                <div class="row gx-0 ">
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="1" (click)="digit($event)">1</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="2" (click)="digit($event)">2</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="3" (click)="digit($event)">3</button>
+                    </div>
+                    <div class="col-3 bg-dark py-4">
+                        <button class="btn btn-dark" value="+" (click)="operator($event)" id="+">+</button>
+                    </div>
+                </div>
+                <div class="row gx-0">
+                    <div class="col-8 bg-dark py-4">
+                        <button class="btn btn-dark float-end" value="0" (click)="digit($event)">0</button>
+                    </div>
+                    <div class="col-2 bg-dark py-4">
+                        <button class="btn btn-dark float-end" value="." (click)="digit($event)">.</button>
+                    </div>
+                    <div class="col-2 bg-danger py-4">
+                        <button class="btn btn-danger " value="=" (click)=equalto($event)>=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<h1>{{count}}</h1>
+</html>
